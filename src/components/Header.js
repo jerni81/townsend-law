@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       width: drawerWidth,
       flexShrink: 0,
-      background: "none",
     },
   },
   appBar: {
@@ -67,6 +66,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "flex-start",
   },
+  // list: {
+  //   backgroundColor: "white",
+  // }
 }));
 
 function HideOnScroll(props) {
@@ -123,11 +125,11 @@ function ResponsiveDrawer(props) {
   };
 
   const drawer = (
-    <div className={classes.drawerOut}>
+    <div className={classes.drawerOut} id="drawer">
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {[
+        {/* {[
           "Home",
           "Experience",
           "Cases",
@@ -138,7 +140,25 @@ function ResponsiveDrawer(props) {
           <ListItem button key={text}>
             <ListItemText primary={text} />
           </ListItem>
-        ))}
+        ))} */}
+        <ListItem button key="Home">
+          <ListItemText primary="Home" />
+        </ListItem>
+        <ListItem button key="Experience">
+          <ListItemText primary="Experience" />
+        </ListItem>
+        <ListItem button key="Cases">
+          <ListItemText primary="Cases" />
+        </ListItem>
+        <ListItem button key="FAQ's">
+          <ListItemText primary="FAQ's" />
+        </ListItem>
+        <ListItem button key="Mediation Calendar">
+          <ListItemText primary="Mediation Calendar" />
+        </ListItem>
+        <ListItem button key="Contact">
+          <ListItemText primary="Contact" />
+        </ListItem>
       </List>
       <Divider />
       <SimpleCard />
@@ -173,7 +193,7 @@ function ResponsiveDrawer(props) {
         </AppBar>
       </HideOnScroll>
 
-      <nav className={classes.drawer} aria-label="mailbox folders">
+      <nav className={classes.drawer}>
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden mdUp implementation="css">
           <Drawer

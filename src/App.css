@@ -9,6 +9,7 @@
   align-items: center;
   font-family: "Cinzel", serif;
   font-weight: 600;
+  margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -16,6 +17,11 @@
 #name {
   margin: 0;
 }
+
+/* #drawer {
+  background-image: url("images/header_bg.jpg");
+  background-size: auto;
+} */
 
 #back-to-top-anchor {
   margin-top: 24px;
